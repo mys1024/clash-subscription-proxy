@@ -1,4 +1,4 @@
-import type { ClashProfileParser } from "~/types.ts";
+import type { ClashProfileParser } from "../../types.ts";
 import parser0 from "./parser0.ts";
 import parser1 from "./parser1.ts";
 

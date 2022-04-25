@@ -1,5 +1,5 @@
-import app from "~/app.ts";
-import output from "~/utils/output.ts";
+import app from "./app.ts";
+import output from "./utils/output.ts";
 
 const port = Deno.env.get("HTTP_PORT") ?? "8080";
 

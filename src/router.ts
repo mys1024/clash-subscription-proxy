@@ -1,6 +1,6 @@
-import { Router } from "~/deps.ts";
-import { getClashProfileParser } from "~/parsers/clash/index.ts";
-import { log } from "~/utils/output.ts";
+import { Router } from "./deps.ts";
+import { getClashProfileParser } from "./parsers/clash/index.ts";
+import { log } from "./utils/output.ts";
 
 const router = new Router();
 

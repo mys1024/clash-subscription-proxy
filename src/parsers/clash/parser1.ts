@@ -1,5 +1,5 @@
-import type { ClashProfile } from "~/types.ts";
-import { parseYaml, stringifyYaml } from "~/deps.ts";
+import type { ClashProfile } from "../../types.ts";
+import { parseYaml, stringifyYaml } from "../../deps.ts";
 
 export default function (yamlProfile: string): string {
   const profile = parseYaml(yamlProfile) as ClashProfile;

@@ -10,7 +10,7 @@ import {
   red,
   white,
   yellow,
-} from "~/deps.ts";
+} from "../deps.ts";
 
 const timeString = (date: Date = new Date()) => {
   return dateFormat(date, "yyyy/MM/dd HH:mm:ss");
