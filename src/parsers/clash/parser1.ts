@@ -10,35 +10,35 @@ export default function (yamlProfile: string): string {
   // region proxy groups
   const regionProxyGroups = [
     {
-      name: "🇭🇰香港（负载均衡）",
+      name: "🇭🇰地域组-香港（负载均衡）",
       type: "load-balance",
       proxies: rawProxies.filter((name) => /(香港|港区|港服|沪港)/.test(name)),
       url: "http://www.gstatic.com/generate_204",
       interval: 300,
     },
     {
-      name: "🇹🇼台湾（负载均衡）",
+      name: "🇹🇼地域组-台湾（负载均衡）",
       type: "load-balance",
       proxies: rawProxies.filter((name) => /(台湾|台区|台服)/.test(name)),
       url: "http://www.gstatic.com/generate_204",
       interval: 600,
     },
     {
-      name: "🇯🇵日本（负载均衡）",
+      name: "🇯🇵地域组-日本（负载均衡）",
       type: "load-balance",
       proxies: rawProxies.filter((name) => /(日本|日区|日服|中日)/.test(name)),
       url: "http://www.gstatic.com/generate_204",
       interval: 600,
     },
     {
-      name: "🇸🇬新加坡（负载均衡）",
+      name: "🇸🇬地域组-新加坡（负载均衡）",
       type: "load-balance",
       proxies: rawProxies.filter((name) => /(新加坡)/.test(name)),
       url: "http://www.gstatic.com/generate_204",
       interval: 1200,
     },
     {
-      name: "🇺🇸美国（负载均衡）",
+      name: "🇺🇸地域组-美国（负载均衡）",
       type: "load-balance",
       proxies: rawProxies.filter((name) => /(美国|美区|美服|中美)/.test(name)),
       url: "http://www.gstatic.com/generate_204",
@@ -55,17 +55,17 @@ export default function (yamlProfile: string): string {
   ];
   const completedProxyGroups = [
     {
-      name: "1️⃣节点一",
+      name: "1️⃣完全组-组一",
       type: "select",
       proxies: completedProxies,
     },
     {
-      name: "2️⃣节点二",
+      name: "2️⃣完全组-组二",
       type: "select",
       proxies: completedProxies,
     },
     {
-      name: "3️⃣节点三",
+      name: "3️⃣完全组-组三",
       type: "select",
       proxies: completedProxies,
     },
