@@ -11,6 +11,13 @@
     {
       "type": "deno",
       "command": "task",
+      "args": ["run:watch"],
+      "problemMatcher": ["$deno"],
+      "label": "deno task: run:watch"
+    },
+    {
+      "type": "deno",
+      "command": "task",
       "args": ["cache"],
       "problemMatcher": ["$deno"],
       "label": "deno task: cache"
