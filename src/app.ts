@@ -4,9 +4,6 @@ import router from "./router.ts";
 
 const app = new Application();
 
-// router
-app.use(router.routes());
-
 // logger
 app.use(async (ctx, next) => {
   const startTime = Date.now();
@@ -20,5 +17,8 @@ app.use(async (ctx, next) => {
     `${endTime - startTime}ms`, // response time
   ].join(" "));
 });
+
+// router
+app.use(router.routes());
 
 export default app;
