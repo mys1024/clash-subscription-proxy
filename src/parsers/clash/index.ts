@@ -7,7 +7,6 @@ export function getClashProfileParser(
 ): ClashProfileParser | undefined {
   const map: Record<string, ClashProfileParser | undefined> = {
     "CLASH-PROFILE-PARSER-DEFAULT": defaultParser, // default parser
-    "CLASH-PROFILE-PARSER-1": normalParser,
     "CLASH-PROFILE-PARSER-NORMAL": normalParser,
   };
   return map[parserName];
