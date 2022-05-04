@@ -1,11 +1,14 @@
 import type { ClashProfileParser } from "../../types.ts";
-import parser0 from "./parser0.ts";
-import parser1 from "./parser1.ts";
+import defaultParser from "./parser_default.ts";
+import normalParser from "./parser_normal.ts";
 
-export function getClashProfileParser(parserName = "CLASH-PROFILE-PARSER-0") {
+export function getClashProfileParser(
+  parserName = "CLASH-PROFILE-PARSER-DEFAULT",
+): ClashProfileParser | undefined {
   const map: Record<string, ClashProfileParser | undefined> = {
-    "CLASH-PROFILE-PARSER-0": parser0, // default parser
-    "CLASH-PROFILE-PARSER-1": parser1,
+    "CLASH-PROFILE-PARSER-DEFAULT": defaultParser, // default parser
+    "CLASH-PROFILE-PARSER-1": normalParser,
+    "CLASH-PROFILE-PARSER-NORMAL": normalParser,
   };
   return map[parserName];
 }
