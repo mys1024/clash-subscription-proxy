@@ -1,6 +1,5 @@
 import { Router } from "./deps.ts";
 import { getClashProfileParser } from "./parsers/clash/index.ts";
-import output from "./utils/output.ts";
 
 const router = new Router();
 
@@ -30,8 +29,6 @@ router.get("/clash/profile", async (ctx) => {
   }
   ctx.response.headers.set("x-proxy", "clash-subscription-proxy");
   ctx.response.body = parser(profile);
-  // print log
-  output.log(`${ctx.request.ip} ${ctx.request.method} ${ctx.request.url}`);
 });
 
 export default router;
