@@ -4,12 +4,9 @@ import {
   bgWhite,
   bgYellow,
   black,
-  blue,
   dateFormat,
   gray,
-  red,
   white,
-  yellow,
 } from "../deps.ts";
 
 const timeString = (date: Date = new Date()) => {
@@ -20,7 +17,7 @@ export const info = (message: string) => {
   console.info(
     gray(timeString()),
     white(bgBlue(" INFO ")),
-    blue(message),
+    message,
   );
 };
 
@@ -28,7 +25,7 @@ export const warn = (message: string) => {
   console.warn(
     gray(timeString()),
     black(bgYellow(" WARN ")),
-    yellow(message),
+    message,
   );
 };
 
@@ -36,7 +33,7 @@ export const error = (message: string) => {
   console.error(
     gray(timeString()),
     white(bgRed(" ERR  ")),
-    red(message),
+    message,
   );
 };
 
@@ -44,7 +41,7 @@ export const log = (message: string) => {
   console.log(
     gray(timeString()),
     black(bgWhite(" LOG  ")),
-    white(message),
+    message,
   );
 };
 
