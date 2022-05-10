@@ -1,5 +1,5 @@
 import { oak } from "./deps.ts";
-import { getClashProfileParser } from "./parsers/clash/index.ts";
+import { getClashProfileParser } from "./parser/clash/index.ts";
 
 const router = new oak.Router();
 

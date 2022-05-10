@@ -1,5 +1,5 @@
 import { oak } from "../deps.ts";
-import output from "../utils/output.ts";
+import output from "../util/output.ts";
 
 export function logger(): oak.Middleware {
   return async (ctx, next) => {

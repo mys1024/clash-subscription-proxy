@@ -1,5 +1,5 @@
 import app from "./app.ts";
-import output from "./utils/output.ts";
+import output from "./util/output.ts";
 
 const port = "8080";
 
