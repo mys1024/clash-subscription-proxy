@@ -1,7 +1,7 @@
 import { colors, datetime } from "../deps.ts";
 
 const timeString = (date: Date = new Date()) => {
-  return datetime.format(date, "yyyy/MM/dd HH:mm:ss");
+  return date.toISOString();
 };
 
 export const info = (message: string) => {
