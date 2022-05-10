@@ -9,5 +9,6 @@ app.use(logger());
 
 // router
 app.use(router.routes());
+app.use(router.allowedMethods());
 
 export default app;
