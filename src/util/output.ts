@@ -1,4 +1,4 @@
-import { colors, datetime } from "../deps.ts";
+import { colors } from "../deps.ts";
 
 const timeString = (date: Date = new Date()) => {
   return date.toISOString();
