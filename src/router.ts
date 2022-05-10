@@ -1,7 +1,7 @@
-import { Router } from "./deps.ts";
+import { oak } from "./deps.ts";
 import { getClashProfileParser } from "./parsers/clash/index.ts";
 
-const router = new Router();
+const router = new oak.Router();
 
 router.get("/clash/profile", async (ctx) => {
   // get params

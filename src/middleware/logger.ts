@@ -1,7 +1,7 @@
-import type { Middleware } from "../deps.ts";
+import { oak } from "../deps.ts";
 import output from "../utils/output.ts";
 
-export function logger(): Middleware {
+export function logger(): oak.Middleware {
   return async (ctx, next) => {
     const startTime = Date.now();
     await next();

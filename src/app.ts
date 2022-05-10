@@ -1,8 +1,8 @@
-import { Application } from "./deps.ts";
+import { oak } from "./deps.ts";
 import logger from "./middleware/logger.ts";
 import router from "./router.ts";
 
-const app = new Application();
+const app = new oak.Application();
 
 // logger
 app.use(logger());

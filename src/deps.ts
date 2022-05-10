@@ -1,26 +1,9 @@
-export type { Middleware } from "https://deno.land/x/oak@v10.5.1/mod.ts";
-export { Application, Router } from "https://deno.land/x/oak@v10.5.1/mod.ts";
+export * as oak from "https://deno.land/x/oak@v10.5.1/mod.ts";
 
 export * as asserts from "https://deno.land/std@0.137.0/testing/asserts.ts";
 
-export {
-  bgBlue,
-  bgRed,
-  bgWhite,
-  bgYellow,
-  black,
-  blue,
-  gray,
-  red,
-  white,
-  yellow,
-} from "https://deno.land/std@0.136.0/fmt/colors.ts";
+export * as colors from "https://deno.land/std@0.136.0/fmt/colors.ts";
 
-export {
-  format as dateFormat,
-} from "https://deno.land/std@0.136.0/datetime/mod.ts";
+export * as datetime from "https://deno.land/std@0.136.0/datetime/mod.ts";
 
-export {
-  parse as parseYaml,
-  stringify as stringifyYaml,
-} from "https://deno.land/std@0.136.0/encoding/yaml.ts";
+export * as yaml from "https://deno.land/std@0.136.0/encoding/yaml.ts";

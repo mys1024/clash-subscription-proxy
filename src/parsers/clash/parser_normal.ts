@@ -1,11 +1,11 @@
 import type { ClashProfile } from "../../types.ts";
-import { parseYaml, stringifyYaml } from "../../deps.ts";
+import { yaml } from "../../deps.ts";
 
 /**
  * Returns profile after some preprocessing.
  */
 export default function (yamlProfile: string): string {
-  const profile = parseYaml(yamlProfile) as ClashProfile;
+  const profile = yaml.parse(yamlProfile) as ClashProfile;
 
   // names of all raw proxies
   const rawProxies = profile.proxies.map((p) => p.name).sort();
@@ -123,5 +123,5 @@ export default function (yamlProfile: string): string {
     ...profile.rules,
   ];
 
-  return stringifyYaml(profile);
+  return yaml.stringify(profile);
 }

@@ -1,46 +1,37 @@
-import {
-  bgBlue,
-  bgRed,
-  bgWhite,
-  bgYellow,
-  black,
-  dateFormat,
-  gray,
-  white,
-} from "../deps.ts";
+import { colors, datetime } from "../deps.ts";
 
 const timeString = (date: Date = new Date()) => {
-  return dateFormat(date, "yyyy/MM/dd HH:mm:ss");
+  return datetime.format(date, "yyyy/MM/dd HH:mm:ss");
 };
 
 export const info = (message: string) => {
   console.info(
-    gray(timeString()),
-    white(bgBlue(" INFO ")),
+    colors.gray(timeString()),
+    colors.white(colors.bgBlue(" INFO ")),
     message,
   );
 };
 
 export const warn = (message: string) => {
   console.warn(
-    gray(timeString()),
-    black(bgYellow(" WARN ")),
+    colors.gray(timeString()),
+    colors.black(colors.bgYellow(" WARN ")),
     message,
   );
 };
 
 export const error = (message: string) => {
   console.error(
-    gray(timeString()),
-    white(bgRed(" ERR  ")),
+    colors.gray(timeString()),
+    colors.white(colors.bgRed(" ERR  ")),
     message,
   );
 };
 
 export const log = (message: string) => {
   console.log(
-    gray(timeString()),
-    black(bgWhite(" LOG  ")),
+    colors.gray(timeString()),
+    colors.black(colors.bgWhite(" LOG  ")),
     message,
   );
 };
