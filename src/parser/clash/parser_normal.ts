@@ -112,6 +112,9 @@ export default function (yamlProfile: string): string {
 
   // prepend additional rules
   const additionalRules = [
+    // LAN
+    "DOMAIN-SUFFIX,lan,DIRECT",
+    "DOMAIN-SUFFIX,local,DIRECT",
     // github
     "DOMAIN-KEYWORD,github,💻Github",
     "IP-CIDR,20.205.243.0/24,💻Github,no-resolve",
