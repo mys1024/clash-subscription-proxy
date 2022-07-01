@@ -93,7 +93,7 @@ export default function (yamlProfile: string): string {
       proxies: [],
     },
     {
-      name: "🚻5ch",
+      name: "🚻日本流量",
       type: "select",
       proxies: [],
     },
@@ -118,8 +118,9 @@ export default function (yamlProfile: string): string {
     // github
     "DOMAIN-KEYWORD,github,💻Github",
     "IP-CIDR,20.205.243.0/24,💻Github,no-resolve",
-    // 5ch
-    "DOMAIN-SUFFIX,5ch.net,🚻5ch",
+    // 日本流量
+    "DOMAIN-SUFFIX,5ch.net,🚻日本流量",
+    "DOMAIN-SUFFIX,dmm.co.jp,🚻日本流量",
   ];
   profile.rules = [
     ...additionalRules,
