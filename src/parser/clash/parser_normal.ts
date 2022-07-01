@@ -121,6 +121,7 @@ export default function (yamlProfile: string): string {
     // 日本流量
     "DOMAIN-SUFFIX,5ch.net,🚻日本流量",
     "DOMAIN-SUFFIX,dmm.co.jp,🚻日本流量",
+    "DOMAIN-SUFFIX,dmm.com,🚻日本流量",
   ];
   profile.rules = [
     ...additionalRules,
