@@ -1,9 +1,6 @@
 import type { ClashProfile } from "../../types.ts";
 import { yaml } from "../../deps.ts";
 
-/**
- * Returns profile after some preprocessing.
- */
 export default function (yamlProfile: string): string {
   const profile = yaml.parse(yamlProfile) as ClashProfile;
 
