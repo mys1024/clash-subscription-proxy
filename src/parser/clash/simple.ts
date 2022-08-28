@@ -10,35 +10,35 @@ export default function (yamlProfile: string): string {
   // region proxy groups
   const regionProxyGroups = [
     {
-      name: "[地域组]🇭🇰香港",
+      name: "🌏🇭🇰|香港",
       type: "url-test",
       proxies: rawProxies.filter((name) => /(香港|港区|港服|沪港)/.test(name)),
       url: "http://www.gstatic.com/generate_204",
       interval: 300,
     },
     {
-      name: "[地域组]🇹🇼台湾",
+      name: "🌏🇹🇼|台湾",
       type: "url-test",
       proxies: rawProxies.filter((name) => /(台湾|台区|台服)/.test(name)),
       url: "http://www.gstatic.com/generate_204",
       interval: 600,
     },
     {
-      name: "[地域组]🇯🇵日本",
+      name: "🌏🇯🇵|日本",
       type: "url-test",
       proxies: rawProxies.filter((name) => /(日本|日区|日服|中日)/.test(name)),
       url: "http://www.gstatic.com/generate_204",
       interval: 600,
     },
     {
-      name: "[地域组]🇸🇬新加坡",
+      name: "🌏🇸🇬|新加坡",
       type: "url-test",
       proxies: rawProxies.filter((name) => /(新加坡)/.test(name)),
       url: "http://www.gstatic.com/generate_204",
       interval: 1200,
     },
     {
-      name: "[地域组]🇺🇸美国",
+      name: "🌏🇺🇸|美国",
       type: "url-test",
       proxies: rawProxies.filter((name) => /(美国|美区|美服|中美)/.test(name)),
       url: "http://www.gstatic.com/generate_204",
@@ -55,12 +55,12 @@ export default function (yamlProfile: string): string {
   ];
   const completedProxyGroups = [
     {
-      name: "[完全组]组A",
+      name: "⚓|完全A",
       type: "select",
       proxies: completedProxies,
     },
     {
-      name: "[完全组]组B",
+      name: "⚓|完全B",
       type: "select",
       proxies: completedProxies,
     },
@@ -75,27 +75,27 @@ export default function (yamlProfile: string): string {
   ];
   const limitedProxyGroup: ClashProxyGroup[] = [
     {
-      name: "哔哩哔哩",
+      name: "🚀|哔哩哔哩",
       type: "select",
       proxies: [],
     },
     {
-      name: "日本流量",
+      name: "🚀|日本流量",
       type: "select",
       proxies: [],
     },
     {
-      name: "国外流量",
+      name: "🚀|国外流量",
       type: "select",
       proxies: [],
     },
     {
-      name: "国内流量",
+      name: "🚀|国内流量",
       type: "select",
       proxies: [],
     },
     {
-      name: "其他流量",
+      name: "🚀|其他流量",
       type: "select",
       proxies: [],
     },
