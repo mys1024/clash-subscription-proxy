@@ -80,6 +80,11 @@ export default function (yamlProfile: string): string {
       proxies: [],
     },
     {
+      name: "🚀 OpenAI",
+      type: "select",
+      proxies: [],
+    },
+    {
       name: "🚀 国内流量",
       type: "select",
       proxies: [],
@@ -133,6 +138,8 @@ export default function (yamlProfile: string): string {
     "DOMAIN-SUFFIX,bilibili.com,🚀 哔哩哔哩",
     "DOMAIN-SUFFIX,bilibili.tv,🚀 哔哩哔哩",
     "DOMAIN-SUFFIX,bilivideo.com,🚀 哔哩哔哩",
+    // 🚀 OpenAI
+    "DOMAIN-SUFFIX,openai.com,🚀 OpenAI",
     // 🚀 国内流量
     "GEOIP,CN,🚀 国内流量",
     "DOMAIN-SUFFIX,cn,🚀 国内流量",
