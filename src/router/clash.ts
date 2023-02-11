@@ -8,11 +8,11 @@ router.get("/profile", async (ctx) => {
   const url = ctx.request.url.searchParams.get("url");
   const parserName = ctx.request.url.searchParams.get("parser");
   // check params
-  if (!url) {
+  if (!url || !parserName) {
     ctx.response.status = 400;
     return;
   }
-  const parser = getClashProfileParser(parserName ? parserName : undefined);
+  const parser = getClashProfileParser(parserName);
   if (!parser) {
     ctx.response.status = 400;
     return;

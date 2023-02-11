@@ -1,6 +1,6 @@
 import { oak } from "./deps.ts";
 import logger from "./middleware/logger.ts";
-import router from "./router.ts";
+import router from "./router/index.ts";
 
 const app = new oak.Application();
 
