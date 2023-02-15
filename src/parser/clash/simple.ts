@@ -80,7 +80,7 @@ export default function (yamlProfile: string): string {
       proxies: [],
     },
     {
-      name: "🚀 OpenAI",
+      name: "🚀 OpenAI & Bing",
       type: "select",
       proxies: [],
     },
@@ -138,8 +138,9 @@ export default function (yamlProfile: string): string {
     "DOMAIN-SUFFIX,bilibili.com,🚀 哔哩哔哩",
     "DOMAIN-SUFFIX,bilibili.tv,🚀 哔哩哔哩",
     "DOMAIN-SUFFIX,bilivideo.com,🚀 哔哩哔哩",
-    // 🚀 OpenAI
-    "DOMAIN-SUFFIX,openai.com,🚀 OpenAI",
+    // 🚀 OpenAI & Bing
+    "DOMAIN-SUFFIX,openai.com,🚀 OpenAI & Bing",
+    "DOMAIN-SUFFIX,bing.com,🚀 OpenAI & Bing",
     // 🚀 国内流量
     "GEOIP,CN,🚀 国内流量",
     "DOMAIN-SUFFIX,cn,🚀 国内流量",
