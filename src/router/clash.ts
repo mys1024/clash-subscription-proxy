@@ -3,6 +3,13 @@ import { getClashProfileParser } from "../parser/clash/index.ts";
 
 const router = new oak.Router();
 
+/**
+ * @see https://github.com/CareyWang/sub-web
+ * @see https://sub-web.netlify.app/
+ */
+const subscriptionConverterApiUrl =
+  `https://api.wcc.best/sub?target=clash&insert=false`;
+
 router.get("/profile", async (ctx) => {
   // get params
   const url = ctx.request.url.searchParams.get("url");
@@ -18,7 +25,7 @@ router.get("/profile", async (ctx) => {
     return;
   }
   // fetch clash profile from source URL
-  const res = await fetch(url);
+  const res = await fetch(`${subscriptionConverterApiUrl}&url=${url}`);
   const profile = await res.text();
   // response
   const passthroughHeaderField = ["subscription-userinfo"];
