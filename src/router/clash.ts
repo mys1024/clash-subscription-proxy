@@ -25,7 +25,9 @@ router.get("/profile", async (ctx) => {
     return;
   }
   // fetch clash profile from source URL
-  const res = await fetch(`${subscriptionConverterApiUrl}&url=${url}`);
+  const res = await fetch(
+    `${subscriptionConverterApiUrl}&url=${encodeURIComponent(url)}`,
+  );
   const profile = await res.text();
   // response
   const passthroughHeaderField = ["subscription-userinfo"];
