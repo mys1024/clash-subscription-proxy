@@ -12,35 +12,43 @@ export default function (yamlProfile: string): string {
     {
       name: "🌏 🇭🇰 香港",
       type: "url-test",
-      proxies: rawProxies.filter((name) => /(香港|港区|港服|沪港)/.test(name)),
+      proxies: rawProxies.filter((name) =>
+        /(香港|港区|港服|沪港|Hong Kong)/i.test(name)
+      ),
       url: "http://www.gstatic.com/generate_204",
       interval: 300,
     },
     {
       name: "🌏 🇹🇼 台湾",
       type: "url-test",
-      proxies: rawProxies.filter((name) => /(台湾|台区|台服)/.test(name)),
+      proxies: rawProxies.filter((name) =>
+        /(台湾|台区|台服|Taiwan)/i.test(name)
+      ),
       url: "http://www.gstatic.com/generate_204",
       interval: 600,
     },
     {
       name: "🌏 🇯🇵 日本",
       type: "url-test",
-      proxies: rawProxies.filter((name) => /(日本|日区|日服|中日)/.test(name)),
+      proxies: rawProxies.filter((name) =>
+        /(日本|日区|日服|中日|Japan)/i.test(name)
+      ),
       url: "http://www.gstatic.com/generate_204",
       interval: 600,
     },
     {
       name: "🌏 🇸🇬 新加坡",
       type: "url-test",
-      proxies: rawProxies.filter((name) => /(新加坡)/.test(name)),
+      proxies: rawProxies.filter((name) => /(新加坡|Singapore)/i.test(name)),
       url: "http://www.gstatic.com/generate_204",
       interval: 1200,
     },
     {
       name: "🌏 🇺🇸 美国",
       type: "url-test",
-      proxies: rawProxies.filter((name) => /(美国|美区|美服|中美)/.test(name)),
+      proxies: rawProxies.filter((name) =>
+        /(美国|美区|美服|中美|United States)/i.test(name)
+      ),
       url: "http://www.gstatic.com/generate_204",
       interval: 1200,
     },
