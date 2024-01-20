@@ -13,6 +13,7 @@ const subscriptionConverterApiUrl =
 router.get("/profile", async (ctx) => {
   // get params
   const url = ctx.request.url.searchParams.get("url");
+  const convert = ctx.request.url.searchParams.get("convert") === "true";
   const parserName = ctx.request.url.searchParams.get("parser");
   // check params
   if (!url || !parserName) {
@@ -26,13 +27,15 @@ router.get("/profile", async (ctx) => {
   }
   // fetch clash profile from source URL
   const res = await fetch(
-    `${subscriptionConverterApiUrl}&url=${encodeURIComponent(url)}`,
+    convert
+      ? `${subscriptionConverterApiUrl}&url=${encodeURIComponent(url)}`
+      : url,
   );
   const profile = await res.text();
   // response
-  const passthroughHeaderField = ["subscription-userinfo"];
+  const passthroughHeaderFields = ["subscription-userinfo"];
   for (const [name, value] of res.headers.entries()) {
-    if (passthroughHeaderField.includes(name)) {
+    if (passthroughHeaderFields.includes(name)) {
       ctx.response.headers.set(name, value);
     }
   }
