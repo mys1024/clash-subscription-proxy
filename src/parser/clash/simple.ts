@@ -140,8 +140,8 @@ export default function (yamlProfile: string): string {
     "DOMAIN-SUFFIX,bilivideo.com,🚀 B站流量",
     "DOMAIN-SUFFIX,hdslb.com,🚀 B站流量",
     "DOMAIN-SUFFIX,im9.com,🚀 B站流量",
-    "DOMAIN,upos-hz-mirrorakam.akamaized.net🚀 B站流量",
-    "DOMAIN-SUFFIX,smtcdns.net🚀 B站流量",
+    "DOMAIN,upos-hz-mirrorakam.akamaized.net,🚀 B站流量",
+    "DOMAIN-SUFFIX,smtcdns.net,🚀 B站流量",
     // 🚀 OpenAI流量
     "DOMAIN-SUFFIX,openai.com,🚀 OpenAI流量",
     // 🚀 日本流量
