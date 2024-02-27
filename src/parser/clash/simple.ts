@@ -89,7 +89,7 @@ export default function (yamlProfile: string): string {
       proxies: [],
     },
     {
-      name: "🚀 OpenAI流量",
+      name: "🚀 ChatGPT & Copilot 流量",
       type: "select",
       proxies: [],
     },
@@ -142,8 +142,9 @@ export default function (yamlProfile: string): string {
     "DOMAIN-SUFFIX,im9.com,🚀 B站流量",
     "DOMAIN,upos-hz-mirrorakam.akamaized.net,🚀 B站流量",
     "DOMAIN-SUFFIX,smtcdns.net,🚀 B站流量",
-    // 🚀 OpenAI流量
-    "DOMAIN-SUFFIX,openai.com,🚀 OpenAI流量",
+    // 🚀 ChatGPT & Copilot 流量
+    "DOMAIN-SUFFIX,openai.com,🚀 ChatGPT & Copilot 流量",
+    "DOMAIN-SUFFIX,copilot.microsoft.com,🚀 ChatGPT & Copilot 流量",
     // 🚀 日本流量
     "GEOIP,JP,🚀 日本流量",
     "DOMAIN-SUFFIX,5ch.net,🚀 日本流量",
